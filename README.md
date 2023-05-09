@@ -1,26 +1,40 @@
 # sshrm
 A tool to remove quickly all keys belonging to the specified host from a known_hosts file.
 
+
+
 ## Usage 
 
 Usage : 
+
 `sshrm hostname`
+
 `sshrm ip_address`
+
 `sshrm username@hostname`
+
 `sshrm user@ip_address`
+
+
 
 ## Prerequisites 
 
 You need to have **ssh-keygen** command.
+
 Gentoo : `emerge -av net-misc/openssh`
+
 RedHat + Fedora : `dnf install openssh`
+
 Debian + Ubuntu : `apt install openssh-client`
+
+
 
 ## Installation
 
 Put the sshrm executable into **/usr/local/bin** or **/usr/bin**
 
 To uninstall, remove **/usr/local/bin/sshrm** or **/usr/bin/sshrm**
+
 
 
 ## Example 
