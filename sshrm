@@ -1,0 +1,11 @@
+#! /bin/bash
+
+CLI=$1
+
+echo "$CLI"
+if [[ "$CLI" =~ \@ ]]
+then
+	CLI=$(echo $CLI | cut -d '@' -f2)
+fi
+
+ssh-keygen -R $CLI
