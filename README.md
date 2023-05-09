@@ -12,9 +12,7 @@ Usage :
 When you use a lot of virtual machines, sometime when you connect with ssh, you have this WARNING : 
 
 `@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
-
 @    WARNING: REMOTE HOST IDENTIFICATION HAS CHANGED!     @
-
 @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 
 IT IS POSSIBLE THAT SOMEONE IS DOING SOMETHING NASTY!
