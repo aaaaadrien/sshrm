@@ -1,11 +1,26 @@
 #! /bin/bash
 
-CLI=$1
+ARGS=$1
 
-echo "$CLI"
-if [[ "$CLI" =~ \@ ]]
+#echo "$ARGS"
+
+# CHECK if only IP/HOSTNAME or user@IP/user@HOSTAME
+if [[ "$ARGS" =~ \@ ]]
 then
-	CLI=$(echo $CLI | cut -d '@' -f2)
+	# KEEP only things after @ (The IP or HOSTNAME)
+	SRV=$(echo $ARGS | cut -d '@' -f2)
+else
+	SRV="$CLI"
 fi
 
-ssh-keygen -R $CLI
+# REMOVE in known_hosts
+ssh-keygen -R $SRV
+
+# ASK to reconnect
+read -p "Reconnect ? IT WILL RUN \"ssh $SRV\" ? (y/N) " RECO
+
+# CHECK ANSWSER
+if [[ "$RECO" == "y" ]]
+then
+	ssh "$ARGS"
+fi
