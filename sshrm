@@ -10,7 +10,7 @@ then
 	# KEEP only things after @ (The IP or HOSTNAME)
 	SRV=$(echo $ARGS | cut -d '@' -f2)
 else
-	SRV="$CLI"
+	SRV="$ARGS"
 fi
 
 # REMOVE in known_hosts
