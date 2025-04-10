@@ -17,7 +17,7 @@ fi
 ssh-keygen -R $SRV
 
 # ASK to reconnect
-read -p "Reconnect ? IT WILL RUN \"ssh $SRV\" ? (y/N) " RECO
+read -p "Reconnect ? IT WILL RUN \"ssh $ARGS\" ? (y/N) " RECO
 
 # CHECK ANSWSER
 if [[ "$RECO" == "y" ]]
